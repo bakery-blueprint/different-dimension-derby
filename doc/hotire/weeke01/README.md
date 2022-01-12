@@ -29,7 +29,15 @@ A DDD will very often involve using OOD.
 
 DDD는 복잡한 도메인을 다루는 소프트웨어 프로젝트에 초점을 맞추고 가속화하는 설계 결정을 내리기 위한 관행 및 용어 구조를 제공합니다.
 
-https://www.haselt.com/blog/domain-driven-design-vs-object-oriented-programming
+도메인(Domain)과 객체(Object)의 차이는 무엇일까요?
+큰 차이는 없습니다. 객체의 의미는 개발에서 실질적으로 기술에 더 가까운 의미로 사용되고 있지만, 탄생 배경으로 보면 객체도 충분히 현실 세계를 반영합니다. 실제 개발에서도 불가능하다고는 할 수 없습니다.
+차이는 도메인과 객체가 설명하는 범위에서 나타납니다. 객체는 추상화 또는 구체화할 수 있는 특정 요소만을 표현하는 반면, 도메인은 사용자가 사용하는 모든 것을 설명할 수 있습니다.
+예를 들면,
+“고양이는 사과를 먹는다.”
+객체의 관점에서는 “고양이”와 “사과”를 표현할 수 있고, “먹는다”는 객체가 하는 행위로 별도로 표현합니다. 도메인의 관점에서는 “고양이”, “사과”, “먹는다”, “고양이는 사과를 먹는다.” 모두 각각 도메인이라고 할 수 있습니다.
+
+- https://www.haselt.com/blog/domain-driven-design-vs-object-oriented-programming
+- https://medium.com/react-native-seoul/%EB%8F%84%EB%A9%94%EC%9D%B8-%EC%A3%BC%EB%8F%84-%EC%84%A4%EA%B3%84-domain-driven-design-in-real-project-1-%EB%8F%84%EB%A9%94%EC%9D%B8-83a5e31c5e45
 
 
 
