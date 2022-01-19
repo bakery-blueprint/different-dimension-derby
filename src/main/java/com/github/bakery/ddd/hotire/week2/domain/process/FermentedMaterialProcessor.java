@@ -8,6 +8,6 @@ import com.github.bakery.ddd.hotire.week2.domain.material.FermentedMaterial;
 public class FermentedMaterialProcessor implements MaterialProcessor<FermentedMaterial, FermentedDough>{
     @Override
     public FermentedDough make(List<FermentedMaterial> material) {
-        return null;
+        return new FermentedDough(material);
     }
 }
