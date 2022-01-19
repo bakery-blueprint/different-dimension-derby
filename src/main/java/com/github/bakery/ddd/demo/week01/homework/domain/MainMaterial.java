@@ -14,5 +14,5 @@ public class MainMaterial {
 
     private final String name;
     private final MainMaterialStep currentStep;
-    private final int doughTime;
+    private final int amount;
 }

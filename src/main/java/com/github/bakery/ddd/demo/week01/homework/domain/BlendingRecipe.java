@@ -1,9 +1,12 @@
 package com.github.bakery.ddd.demo.week01.homework.domain;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.ToString;
 
 @EqualsAndHashCode
@@ -13,31 +16,29 @@ public class BlendingRecipe {
 
     public static final int MAX_MAIN_MATERIAL_COUNT = 2;
 
-    private List<MainMaterialAndRatio> mainMaterialAndRatios = new ArrayList<>();
+    private final long blendingRecipeId;
+    private List<RecipeMainMaterial> recipeMainMaterials;
 
-    public void addMainMaterialAndRatio(MainMaterial mainMaterial, int ratio){
-        if(mainMaterialAndRatios.isEmpty()) {
-            new MainMaterialAndRatio(mainMaterial, ratio);
-            return;
-        }
-        verifyMainMaterialAddable();
-        mainMaterialAndRatios.add(new MainMaterialAndRatio(mainMaterial, ratio));
-    }
+    public BlendingRecipe(final Long blendingRecipeId, final List<RecipeMainMaterial> recipeMainMaterials) {
 
-    private void verifyMainMaterialAddable() {
-        if(MAX_MAIN_MATERIAL_COUNT > mainMaterialAndRatios.size()) {
+        if(MAX_MAIN_MATERIAL_COUNT > recipeMainMaterials.size()) {
             throw new IllegalStateException("The number of main material cannot exceed " + MAX_MAIN_MATERIAL_COUNT);
         }
+
+        if(recipeMainMaterials.size() != new HashSet<>(recipeMainMaterials).size()) {
+            throw new IllegalArgumentException("Duplicate materials");
+        }
+        this.blendingRecipeId = blendingRecipeId;
+        this.recipeMainMaterials = Objects.requireNonNullElseGet(recipeMainMaterials, ArrayList::new);
     }
 
+    @ToString
+    @EqualsAndHashCode
     @Getter
-     class MainMaterialAndRatio {
-         private final MainMaterial mainMaterial;
-         private final int ratio;
-
-         public MainMaterialAndRatio(final MainMaterial mainMaterial, final int ratio) {
-             this.mainMaterial = mainMaterial;
-             this.ratio = ratio;
-         }
+    @RequiredArgsConstructor
+    public static class RecipeMainMaterial {
+        private final String name;
+        private final int doughTime;
+        private final int amount;
     }
 }
