@@ -42,6 +42,8 @@ class DoughTest {
                 return;
             }
             var result = new Dough(it.materials);
+
+            // then
             assertThat(result.getFlour()).isEqualTo(it.expected.getFlour());
             assertThat(result.getWater().getTemperature()).isEqualTo(it.expected.getWater().getTemperature());
         }));
