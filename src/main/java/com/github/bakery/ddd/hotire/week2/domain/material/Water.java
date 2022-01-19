@@ -5,6 +5,6 @@ import lombok.RequiredArgsConstructor;
 
 @Getter
 @RequiredArgsConstructor
-public class Water implements Material {
+public class Water implements DoughMaterial {
     private final Double temperature;
 }

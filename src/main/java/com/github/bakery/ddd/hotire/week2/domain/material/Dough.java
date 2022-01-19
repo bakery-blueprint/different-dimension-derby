@@ -1,32 +1,37 @@
 package com.github.bakery.ddd.hotire.week2.domain.material;
 
-import java.time.Duration;
 import java.time.Instant;
-import java.util.Set;
+import java.util.List;
+import java.util.stream.Collectors;
 
-import org.springframework.util.CollectionUtils;
+import lombok.Getter;
 
 /**
- * Material Root
+ * DoughMaterial Root
  */
-public class Dough implements Material {
+@Getter
+public class Dough implements FermentedMaterial {
     private final Flour flour;
     private final Water water;
-    private final Duration duration;
     private final Instant createdDate;
 
-    public Dough(Flour flour, Water water, Duration duration) {
-        this.flour = flour;
-        this.water = verifyWaterTemperature(water);
-        this.duration = duration;
+    public Dough(List<DoughMaterial> materials) {
+        this.flour = findDoughMaterial(materials, Flour.class);
+        this.water = verifyWaterTemperature(findDoughMaterial(materials, Water.class));
         this.createdDate = Instant.now();
     }
 
-    private Set<FlourMaterial> verifyFlourMaterial(Set<FlourMaterial> flourMaterials) {
-        if (CollectionUtils.isEmpty(flourMaterials) || flourMaterials.size() > 2) {
-            throw new IllegalArgumentException("invalid flour material size");
+    private <T extends DoughMaterial> T findDoughMaterial(List<DoughMaterial> material, Class<T> type) {
+        final List<T> flours = material.stream()
+                                       .filter(type::isInstance)
+                                       .map(type::cast)
+                                       .collect(Collectors.toList());
+
+        if (flours.size() != 1) {
+            throw new IllegalArgumentException("invalid dough material size");
         }
-        return flourMaterials;
+
+        return flours.get(0);
     }
 
     private Water verifyWaterTemperature(Water water) {
