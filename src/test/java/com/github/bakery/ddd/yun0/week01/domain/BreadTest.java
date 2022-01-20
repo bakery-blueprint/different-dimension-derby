@@ -9,7 +9,7 @@ import java.util.Set;
 
 class BreadTest {
     @Test
-    void prepare() {
+    void prepareAndKnead() {
         // given
         var recipe = new BaseRecipe(0.5, 2, 40, 15);
         var processor = new BakeryProcessor(recipe);
