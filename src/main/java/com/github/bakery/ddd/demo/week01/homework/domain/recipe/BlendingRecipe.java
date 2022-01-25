@@ -1,4 +1,4 @@
-package com.github.bakery.ddd.demo.week01.homework.domain;
+package com.github.bakery.ddd.demo.week01.homework.domain.recipe;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -17,7 +17,7 @@ public class BlendingRecipe {
     public static final int MAX_MAIN_MATERIAL_COUNT = 2;
 
     private final long blendingRecipeId;
-    private List<RecipeMainMaterial> recipeMainMaterials;
+    private final List<RecipeMainMaterial> recipeMainMaterials;
 
     public BlendingRecipe(final Long blendingRecipeId, final List<RecipeMainMaterial> recipeMainMaterials) {
 

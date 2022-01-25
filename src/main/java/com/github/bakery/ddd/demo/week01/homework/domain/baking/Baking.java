@@ -1,6 +1,9 @@
-package com.github.bakery.ddd.demo.week01.homework.domain;
+package com.github.bakery.ddd.demo.week01.homework.domain.baking;
 
-import com.github.bakery.ddd.demo.week01.homework.domain.BlendingRecipe.RecipeMainMaterial;
+import com.github.bakery.ddd.demo.week01.homework.domain.material.DoughWater;
+import com.github.bakery.ddd.demo.week01.homework.domain.material.MainMaterial;
+import com.github.bakery.ddd.demo.week01.homework.domain.recipe.BlendingRecipe;
+import com.github.bakery.ddd.demo.week01.homework.domain.recipe.BlendingRecipe.RecipeMainMaterial;
 import com.github.bakery.ddd.demo.week01.homework.value.MainMaterialStep;
 import java.util.HashSet;
 import java.util.Map;

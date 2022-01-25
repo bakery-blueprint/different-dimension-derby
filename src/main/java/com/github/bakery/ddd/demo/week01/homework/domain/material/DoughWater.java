@@ -1,4 +1,4 @@
-package com.github.bakery.ddd.demo.week01.homework.domain;
+package com.github.bakery.ddd.demo.week01.homework.domain.material;
 
 import com.github.bakery.ddd.demo.week01.homework.value.Temperature;
 import lombok.Getter;
