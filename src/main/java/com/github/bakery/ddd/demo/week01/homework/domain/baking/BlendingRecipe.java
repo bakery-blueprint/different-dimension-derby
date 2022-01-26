@@ -1,4 +1,4 @@
-package com.github.bakery.ddd.demo.week01.homework.domain.recipe;
+package com.github.bakery.ddd.demo.week01.homework.domain.baking;
 
 import java.util.ArrayList;
 import java.util.HashSet;

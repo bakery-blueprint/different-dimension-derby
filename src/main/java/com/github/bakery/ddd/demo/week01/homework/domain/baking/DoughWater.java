@@ -1,6 +1,5 @@
-package com.github.bakery.ddd.demo.week01.homework.domain.material;
+package com.github.bakery.ddd.demo.week01.homework.domain.baking;
 
-import com.github.bakery.ddd.demo.week01.homework.value.Temperature;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
