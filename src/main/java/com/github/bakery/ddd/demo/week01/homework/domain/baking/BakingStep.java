@@ -7,6 +7,7 @@ import javax.persistence.Embeddable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
 @Getter
 public enum BakingStep {
     PREPARE(0), DOUGH(1), FERMENT(2), BAKE(3), DECORATION(4), NONE(5);
