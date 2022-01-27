@@ -11,9 +11,10 @@ spring:
     password:
     driverClassName: org.h2.Driver
   jpa:
-    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    spring.jpa.database-platform: org.hibernate.dialect.MySQL5Dialect
     database-platform: H2
     show-sql: true
     properties:
       hibernate:
+        ddl-auto: create
         format_sql: true
