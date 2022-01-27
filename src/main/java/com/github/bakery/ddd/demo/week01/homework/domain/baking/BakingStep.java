@@ -1,7 +1,11 @@
 package com.github.bakery.ddd.demo.week01.homework.domain.baking;
 
 import java.util.Arrays;
+
+import javax.persistence.Embeddable;
+
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 @Getter
 public enum BakingStep {
@@ -11,6 +15,7 @@ public enum BakingStep {
     BakingStep(final int order) {
         this.order = order;
     }
+
 
     public BakingStep getNextStep() {
         if (this.equals(BakingStep.NONE)) {
