@@ -8,6 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@ToString
+@NoArgsConstructor
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn

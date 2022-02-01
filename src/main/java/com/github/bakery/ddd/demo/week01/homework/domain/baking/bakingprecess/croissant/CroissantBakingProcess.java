@@ -2,8 +2,11 @@ package com.github.bakery.ddd.demo.week01.homework.domain.baking.bakingprecess.c
 
 import com.github.bakery.ddd.demo.week01.homework.domain.baking.BakingStep;
 import com.github.bakery.ddd.demo.week01.homework.domain.baking.bakingprecess.BakingProcess;
-import lombok.Getter;
 
+import lombok.Getter;
+import lombok.ToString;
+
+@ToString
 @Getter
 abstract public class CroissantBakingProcess implements BakingProcess {
 
