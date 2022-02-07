@@ -3,7 +3,7 @@ package com.github.bakery.ddd.hotire.util;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.github.bakery.ddd.hotire.domain.material.Material;
+import com.github.bakery.ddd.hotire.domain.bread.material.Material;
 
 public abstract class MaterialUtils {
 

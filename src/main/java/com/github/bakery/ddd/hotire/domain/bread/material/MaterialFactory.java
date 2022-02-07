@@ -1,10 +1,10 @@
-package com.github.bakery.ddd.hotire.domain.material;
+package com.github.bakery.ddd.hotire.domain.bread.material;
 
 import java.util.Map;
 
-import com.github.bakery.ddd.hotire.domain.BreadStatus;
-import com.github.bakery.ddd.hotire.domain.material.FlourMaterial.AlmondFlour;
-import com.github.bakery.ddd.hotire.domain.material.FlourMaterial.RiceFlour;
+import com.github.bakery.ddd.hotire.domain.bread.BreadStatus;
+import com.github.bakery.ddd.hotire.domain.bread.material.FlourMaterial.AlmondFlour;
+import com.github.bakery.ddd.hotire.domain.bread.material.FlourMaterial.RiceFlour;
 import com.github.bakery.ddd.hotire.util.JsonUtils;
 
 public class MaterialFactory {

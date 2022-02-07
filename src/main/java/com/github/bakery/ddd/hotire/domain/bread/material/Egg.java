@@ -1,6 +1,6 @@
-package com.github.bakery.ddd.hotire.domain.material;
+package com.github.bakery.ddd.hotire.domain.bread.material;
 
-import com.github.bakery.ddd.hotire.domain.BreadStatus;
+import com.github.bakery.ddd.hotire.domain.bread.BreadStatus;
 
 public class Egg extends Material{
     public Egg(BreadStatus breadStatus) {

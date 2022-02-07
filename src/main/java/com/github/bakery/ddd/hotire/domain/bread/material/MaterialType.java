@@ -1,4 +1,4 @@
-package com.github.bakery.ddd.hotire.domain.material;
+package com.github.bakery.ddd.hotire.domain.bread.material;
 
 import lombok.RequiredArgsConstructor;
 

@@ -4,8 +4,8 @@ import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
-import com.github.bakery.ddd.hotire.domain.Bread;
-import com.github.bakery.ddd.hotire.domain.BreadRepository;
+import com.github.bakery.ddd.hotire.domain.bread.Bread;
+import com.github.bakery.ddd.hotire.domain.bread.BreadRepository;
 import com.github.bakery.ddd.hotire.persistent.adapter.mapper.BreadJpaEntityMapper;
 import com.github.bakery.ddd.hotire.persistent.repository.BreadJpaEntityRepository;
 

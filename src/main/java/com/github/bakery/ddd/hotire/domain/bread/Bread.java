@@ -1,13 +1,13 @@
-package com.github.bakery.ddd.hotire.domain;
+package com.github.bakery.ddd.hotire.domain.bread;
 
 import java.time.Instant;
 import java.util.List;
 
 import org.springframework.util.CollectionUtils;
 
-import com.github.bakery.ddd.hotire.domain.material.Material;
-import com.github.bakery.ddd.hotire.domain.material.Water;
-import com.github.bakery.ddd.hotire.domain.material.Yeast;
+import com.github.bakery.ddd.hotire.domain.bread.material.Material;
+import com.github.bakery.ddd.hotire.domain.bread.material.Water;
+import com.github.bakery.ddd.hotire.domain.bread.material.Yeast;
 
 import lombok.RequiredArgsConstructor;
 
