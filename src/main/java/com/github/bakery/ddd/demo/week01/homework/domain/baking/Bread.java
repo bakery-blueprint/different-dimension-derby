@@ -1,20 +1,27 @@
 package com.github.bakery.ddd.demo.week01.homework.domain.baking;
 
-import javax.persistence.Access;
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-import org.springframework.data.annotation.AccessType.Type;
-
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@EqualsAndHashCode
 @NoArgsConstructor
 @Embeddable
 @Getter
 public class Bread {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String name;
+    private Integer price;
 
     @Embedded
     private BakingStep bakingStep;
