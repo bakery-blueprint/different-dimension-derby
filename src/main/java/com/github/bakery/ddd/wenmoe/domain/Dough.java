@@ -2,24 +2,18 @@ package com.github.bakery.ddd.wenmoe.domain;
 
 import org.springframework.util.CollectionUtils;
 
-import java.util.List;
+import java.util.Set;
 
 public class Dough {
     private int minute; // 반죽 시간..?
-    private List<Flour> flours;
-    private Water water;
+    private Set<MainIngredient> mainIngredients;
 
-    public Dough(List<Flour> flours, Water water) {
-        if (CollectionUtils.isEmpty(flours) || flours.size() > 2) {
+    public Dough(Set<MainIngredient> mainIngredients) {
+        if (CollectionUtils.isEmpty(mainIngredients) || mainIngredients.size() > 2) {
             throw new IllegalStateException();
         }
 
-        if (water.getTemperature() > 40) {
-            throw new IllegalStateException("Water too hot!");
-        }
-
-        this.flours = flours;
-        this.water = water;
+        this.mainIngredients = mainIngredients;
         this.minute = 0;
     }
 }
