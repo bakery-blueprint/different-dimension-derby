@@ -9,11 +9,13 @@ import com.github.bakery.ddd.hotire.domain.bread.material.Material;
 import com.github.bakery.ddd.hotire.domain.bread.material.Water;
 import com.github.bakery.ddd.hotire.domain.bread.material.Yeast;
 
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 /**
  * Root
  */
+@Getter
 @RequiredArgsConstructor
 public class Bread {
     private final Long id;

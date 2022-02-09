@@ -2,13 +2,9 @@ package com.github.bakery.ddd.hotire.domain.billing;
 
 import java.math.BigDecimal;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.Data;
 
-@RequiredArgsConstructor
-@EqualsAndHashCode
-@Getter
+@Data
 public class Money {
-    private final BigDecimal value;
+    private BigDecimal value;
 }
