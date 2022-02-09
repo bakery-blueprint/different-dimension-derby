@@ -37,6 +37,14 @@ public class Cafe implements Serializable {
         breads.addAll(breadStock);
     }
 
+    public int getBreadPrice(String breadName) {
+        Bread bread = breads.stream()
+                            .filter(it -> it.getName().equals(breadName))
+                            .findAny()
+                            .orElseThrow(() -> new IllegalArgumentException("The selected bread does not exist."));
+        return bread.getPrice();
+    }
+
     private void verifyBreadStock(List<Bread> breadStock) {
         breadStock.stream()
                   .filter(it -> Objects.isNull(it.getPrice()))
