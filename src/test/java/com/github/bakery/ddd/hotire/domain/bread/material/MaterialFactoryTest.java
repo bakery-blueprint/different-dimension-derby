@@ -1,11 +1,11 @@
-package com.github.bakery.ddd.hotire.domain.material;
+package com.github.bakery.ddd.hotire.domain.bread.material;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import com.github.bakery.ddd.hotire.domain.BreadStatus;
-import com.github.bakery.ddd.hotire.domain.material.FlourMaterial.AlmondFlour;
+import com.github.bakery.ddd.hotire.domain.bread.BreadStatus;
+import com.github.bakery.ddd.hotire.domain.bread.material.FlourMaterial.AlmondFlour;
 
 class MaterialFactoryTest {
 

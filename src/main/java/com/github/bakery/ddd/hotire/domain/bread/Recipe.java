@@ -1,6 +1,6 @@
-package com.github.bakery.ddd.hotire.domain;
+package com.github.bakery.ddd.hotire.domain.bread;
 
-import com.github.bakery.ddd.hotire.domain.material.MaterialType;
+import com.github.bakery.ddd.hotire.domain.bread.material.MaterialType;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;

@@ -1,4 +1,4 @@
-package com.github.bakery.ddd.hotire.domain;
+package com.github.bakery.ddd.hotire.domain.bread;
 
 import java.util.Arrays;
 import java.util.Map;

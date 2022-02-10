@@ -1,8 +1,8 @@
-package com.github.bakery.ddd.hotire.domain.material;
+package com.github.bakery.ddd.hotire.domain.bread.material;
 
 import java.time.Duration;
 
-import com.github.bakery.ddd.hotire.domain.BreadStatus;
+import com.github.bakery.ddd.hotire.domain.bread.BreadStatus;
 
 import lombok.Getter;
 import lombok.ToString;
