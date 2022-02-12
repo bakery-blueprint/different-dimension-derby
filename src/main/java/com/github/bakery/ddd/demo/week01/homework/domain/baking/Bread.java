@@ -1,20 +1,20 @@
 package com.github.bakery.ddd.demo.week01.homework.domain.baking;
 
-import javax.persistence.Access;
 import javax.persistence.Embeddable;
 import javax.persistence.Embedded;
 
-import org.springframework.data.annotation.AccessType.Type;
-
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@EqualsAndHashCode
 @NoArgsConstructor
 @Embeddable
 @Getter
 public class Bread {
 
     private String name;
+    private Integer price;
 
     @Embedded
     private BakingStep bakingStep;
