@@ -24,6 +24,7 @@ public class Bread {
     private BreadStatus breadStatus;
     private List<Material> materials;
     private Instant modifiedDate;
+    private Instant expirationDate;
 
     public void doPrepared(List<Material> materials) {
         verifyStatus(BreadStatus.PREPARED);

@@ -1,24 +1,32 @@
 package com.github.bakery.ddd.hotire.domain.account;
 
-import com.github.bakery.ddd.hotire.domain.billing.Billing;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import com.github.bakery.ddd.hotire.domain.billing.Money;
 
-import lombok.RequiredArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
 
-@RequiredArgsConstructor
+@Entity
+@Getter
+@Setter
 public class Account {
-    private final Long id;
-    private final String name;
-    private final String address;
-    private final Billing billing;
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String name;
+    private String address;
+    private Money balance;
 
     public void buy(Money price) {
         checkAvailableBuy(price);
-        billing.getBalance().setValue(billing.getBalance().getValue().subtract(price.getValue()));
+        getBalance().setValue(getBalance().getValue().subtract(price.getValue()));
     }
 
     private void checkAvailableBuy(Money price) {
-        if (billing.getBalance().getValue().compareTo(price.getValue()) >= 0) {
+        if (getBalance().getValue().compareTo(price.getValue()) >= 0) {
             throw new IllegalStateException("잔고가 부족합니다. ");
         }
     }
