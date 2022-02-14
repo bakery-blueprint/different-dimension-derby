@@ -1,6 +1,5 @@
 package com.github.bakery.ddd.demo.week01.homework.controller;
 
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,7 +13,7 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 @RequestMapping("/customer")
-@Controller
+//@Controller
 public class CustomerController {
 
     private final CafeService cafeService;
