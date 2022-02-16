@@ -58,18 +58,19 @@ public class Baking {
         this.bread = process.process(this.breadRecipe, mainMaterial, subMaterial);
     }
 
-    public void processNextStep(List<Material> mainMaterial, List<Material> subMaterial) {
+    public Bread processNextStep(List<Material> mainMaterial, List<Material> subMaterial) {
         BakingProcess process = breadRecipe.getProcess(bread.getCurrentBakingStep().getNextStep());
-        this.bread = process.process(this.breadRecipe, mainMaterial, subMaterial);
+        return process.process(this.breadRecipe, mainMaterial, subMaterial);
     }
 
     public Bread createBread() {
-        processNextStep(this.mainMaterial, this.subMaterial);
-        processNextStep(this.mainMaterial, this.subMaterial);
-        processNextStep(this.mainMaterial, this.subMaterial);
-        processNextStep(this.mainMaterial, this.subMaterial);
-        processNextStep(this.mainMaterial, this.subMaterial);
-
+        BakingStep currentBakingStep = this.bread.getBakingStep();
+        for (int i = currentBakingStep.getOrder(); i < BakingStep.values().length; i++) {
+            if (i == BakingStep.NONE.getOrder()) {
+                break;
+            }
+            this.bread = processNextStep(this.mainMaterial, this.subMaterial);
+        }
         return this.bread;
     }
 }
