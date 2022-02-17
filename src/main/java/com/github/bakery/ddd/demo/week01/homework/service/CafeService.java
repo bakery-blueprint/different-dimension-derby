@@ -36,11 +36,7 @@ public class CafeService {
         Cafe cafe = cafeRepository.findById(buyBread.getCafeId())
                                   .orElseThrow(() -> new IllegalArgumentException("This cafe doesn't exist."));
 
-        int breadPrice = cafe.getBreadPrice(buyBread.getBreadName());
-        Integer money = customer.payForBread(breadPrice, buyBread.getAmount());
-        Bag bag = cafe.buyBread(buyBread.getBreadName(), money, buyBread.getAmount());
-        customer.addBread(bag.getBreads());
-        return bag;
+        return cafe.buyBread(customer, buyBread.getBreadName(), buyBread.getAmount());
     }
 
     @Transactional
