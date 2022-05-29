@@ -40,6 +40,13 @@ plus the constraints that govern the problem domain. It does not describe soluti
 이로서 분석 작업과 설계 그리고 구현에 이르기까지 통일된 방식으로 커뮤니케이션이 가능해진다.
 
 
+### CUPID
+
+- Composable: plays well with others
+- Unix philosophy: does one thing well
+- Predictable: does what you expect
+- Idiomatic: feels natural
+- Domain-based: the solution domain models the problem domain in language and structure
 
 
 ## References
