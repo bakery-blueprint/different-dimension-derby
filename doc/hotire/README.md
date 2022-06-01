@@ -42,6 +42,8 @@ plus the constraints that govern the problem domain. It does not describe soluti
 
 ### CUPID
 
+https://blog.naver.com/gngh0101/222755144095
+
 - Composable: plays well with others
 - Unix philosophy: does one thing well
 - Predictable: does what you expect
