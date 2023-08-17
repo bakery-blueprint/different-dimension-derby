@@ -11,6 +11,10 @@
 - https://book.naver.com/bookdb/book_detail.nhn?bid=10615650
 
 
+## AnemicDomainModel
+
+- https://martinfowler.com/bliki/AnemicDomainModel.html
+
 
 
 
