@@ -16,5 +16,9 @@
 - https://martinfowler.com/bliki/AnemicDomainModel.html
 
 
+## CUPID
+
+- https://dannorth.net/2022/02/10/cupid-for-joyful-coding/
+
 
 
