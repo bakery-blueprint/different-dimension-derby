@@ -29,3 +29,27 @@
 ## 객체지향 생활 체조 원칙 
 
 - https://blogshine.tistory.com/241
+
+
+### 일급 콜렉션 
+
+- as-is
+~~~java
+Map<String, String> map = new HashMap<>();
+map.put("1", "A");
+map.put("2", "B");
+map.put("3", "C");
+~~~
+
+- to-be
+~~~java
+public class GameRanking {
+
+    private Map<String, String> ranks;
+
+    public GameRanking(Map<String, String> ranks) {
+        this.ranks = ranks;
+    }
+}
+~~~
+
